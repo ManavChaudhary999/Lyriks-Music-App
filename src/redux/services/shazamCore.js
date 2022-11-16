@@ -1,6 +1,7 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 // const shazamApiKey = process.env.VITE_SHAZAM_CORE_RAPID_API_KEY;
+// console.log(shazamApiKey);
 
 export const shazamCoreApi = createApi({
     reducerPath: 'shazamCoreApi',

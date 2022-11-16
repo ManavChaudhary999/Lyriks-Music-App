@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Searchbar, Sidebar, MusicPlayer } from './components';
 import { ArtistDetails, TopArtists, AroundYou, Discover, Search, SongDetails, TopCharts, HomePage } from './pages';
 
-const url = process.env.NODE_ENV === 'production' ? 'lyrics-music-streaming.netlify.app' : '';
+const url = '';
 
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
