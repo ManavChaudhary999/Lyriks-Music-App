@@ -23,11 +23,13 @@ const Sidebar = () => {
 
   return (
     <>
+      {/* For Desktop */}
       <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
         <img src={logo} alt="logo" className="w-full h-14 object-contains" onClick={()=> navigate("/")} />
         <NavLinks />
       </div>
 
+      {/* For Mobiles */}
       <div className="absolute md:hidden block top-6 right-3">
         {mobileMenuOpen ? 
           <RiCloseLine className="w-6 h-6 text-white mr-2" onClick={() => setMobileMenuOpen(false)} />

@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Searchbar, Sidebar, MusicPlayer } from './components';
 import { ArtistDetails, TopArtists, AroundYou, Discover, Search, SongDetails, TopCharts, HomePage } from './pages';
 
+const url = process.env.NODE_ENV === 'production' ? 'lyrics-music-streaming.netlify.app' : '';
+
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
 
@@ -16,13 +18,13 @@ const App = () => {
           <div className="pb-40">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/Discover" element={<Discover />} />
-              <Route path="/top-artists" element={<TopArtists />} />
-              <Route path="/top-charts" element={<TopCharts />} />
-              <Route path="/around-you" element={<AroundYou />} />
-              <Route path="/artists/:id" element={<ArtistDetails />} />
-              <Route path="/songs/:songid" element={<SongDetails />} />
-              <Route path="/search/:searchTerm" element={<Search />} />
+              <Route path={`${url}/Discover`} element={<Discover />} />
+              <Route path={`${url}/top-artists`} element={<TopArtists />} />
+              <Route path={`${url}/top-charts`} element={<TopCharts />} />
+              <Route path={`${url}/around-you`} element={<AroundYou />} />
+              <Route path={`${url}/artists/:id`} element={<ArtistDetails />} />
+              <Route path={`${url}/songs/:songid`} element={<SongDetails />} />
+              <Route path={`${url}/search/:searchTerm`} element={<Search />} />
             </Routes>
           </div>
         </div>
